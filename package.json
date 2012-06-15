@@ -1,0 +1,16 @@
+{
+  "author": "Tom Wilson <tom@jackhq.com>",
+  "name": "cloudq-web",
+  "description": "A Web Interface to Cloudq",
+  "version": "0.0.1",
+  "dependencies": {
+    "request": "~2.9.202",
+    "zeke": "~0.2.0",
+    "filed": "*"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
