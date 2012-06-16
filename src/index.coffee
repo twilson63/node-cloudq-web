@@ -9,8 +9,6 @@ path = require 'path'
   ]
 
 db = process.env.DB_URL or 'http://localhost:5984/cloudq'
-#db = 'https://jackhq:jackdog63@gmms.iriscouch.com/cloudq'
-#db = 'http://localhost:5984/cloudq'
 
 module.exports = ->
   server = http.createServer (req, res) ->

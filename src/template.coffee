@@ -10,14 +10,14 @@ module.exports = ->
         table '.table', ->
           tr ->
             th 'Name'
-            th 'Queued'
-            th 'Reserved'
-            th 'Completed'
+            th style: 'color: red', 'Queued'
+            th style: 'color: orange', 'Reserved'
+            th style: 'color: green', 'Completed'
           for k, v of @qResults
             tr ->
               td k
-              td v.queued or '0'
-              td v.reserved or '0'
-              td v.completed or '0'
+              td style: 'color: read', (v.queued or '0')
+              td style: 'color: orange', (v.reserved or '0')
+              td style: 'color: green', (v.completed or '0')
       script src: 'http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js'
       script src: '/js/bootstrap.min.js'
