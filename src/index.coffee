@@ -38,6 +38,7 @@ transform = (rows) ->
 # need to create views if they don't exist
 # createView if not_found
 request view, json: true, (e, r, b) ->
+  return console.log 'db not found' if e?
   if b.error is "not_found"
     console.log 'create view'
     request.put db + '/_design/queues', 
