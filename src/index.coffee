@@ -17,7 +17,9 @@ module.exports = ->
       # get queues summary
       request view + '?group=true'
         json: true 
-        (e, r, b) -> render b, (err, html) -> res.end html
+        (e, r, b) -> 
+          return res.end 'DB Not Found.' if e?
+          render b, (err, html) -> res.end html
     else
       filed("./public#{pathname}").pipe(res)
   server.listen process.env.PORT or 3000
